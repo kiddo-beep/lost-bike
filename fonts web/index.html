@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>index</title>
+
+	<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	
+</head>
+<body>
+	<div class="container">
+
+		<div class="set">
+			<div class="item font-name">
+				<select id="name">
+					<option value="oneDay">One Day</option>
+					<option value="oneWeek">One Week</option>
+					<option value="oneMonth">One Month</option>
+				</select>
+			</div>
+			<div class="item font-size">
+				Aa: <div id="slider"></div> <span><strong id="size">80</strong>px</span>
+			</div>
+			<div class="item line-height">
+				Line Height: <div id="slider1"></div> <span id="lineHeight">1</span>
+			</div>
+			<div class="item space">
+				Spacing: <div id="slider2"></div> <span><strong id="space">2</strong>px</span>
+			</div>
+			<div class="item text-align" id="align">
+				<span class="t t-1" id="1"><i class="fa fa-align-left"></i></span>
+				<span class="t t-2" id="2"><i class="fa fa-align-center"></i></span>
+				<span class="t t-3" id="3"><i class="fa fa-align-right"></i></span>
+			</div>
+		</div>
+
+		<div class="preview" id="text">
+			<textarea id="input" placeholder="Please enter text">That day, I was surprised to find that my bicycle was missing a wheel. Where did it go???</textarea>
+		</div>
+
+		
+
+	</div>
+
+
+	<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script>
+	  $(function() {
+		
+
+	  	// font-family
+	  	$('#name').change(function() {
+	  		$('#input').css({'font-family': this.value})
+	  	})
+
+		// font-size
+	    $( "#slider" ).slider({
+	    	'range': 'min',
+	    	'value': 80,
+	    	'min': 20,
+	    	'max': 300,
+			'step': 1,
+	    	change: function(e,res) {
+	    		console.log(res)
+				$('#size').text(res.value);
+				$('#input').css({'font-size': res.value})
+	    	}
+
+	    });
+		
+		// line-height
+	    $( "#slider1" ).slider({
+	    	'range': 'min',
+	    	'value': 1.5,
+	    	'min': 1,
+	    	'max': 4,
+			'step': 0.25,
+	    	change: function(e,res) {
+	    		console.log(res)
+				$('#lineHeight').text(res.value);
+				$('#input').css({'line-height': res.value})
+	    	}
+
+	    });
+		
+		// spacing
+	    $( "#slider2" ).slider({
+	    	'range': 'min',
+	    	'value': 2,
+	    	'min': 0,
+	    	'max': 20,
+			'step': 1,
+	    	change: function(e,res) {
+	    		console.log(res)
+				$('#space').text(res.value);
+				$('#input').css({'letter-spacing': res.value})
+	    	}
+
+	    });
+		
+		// align
+		$('#align span').click(function() {
+			$('#align span').removeClass('active');
+			$(this).addClass('active');
+			let id = this.id;
+			if(id == 1) {
+				$('#input').css({'text-align': 'left'})
+			}
+			if(id == 2) {
+				$('#input').css({'text-align': 'center'})
+			}
+			if(id == 3) {
+				$('#input').css({'text-align': 'right'})
+			}
+		})
+		
+		
+		
+	  });
+	    
+	  </script>
+</body>
+</html>

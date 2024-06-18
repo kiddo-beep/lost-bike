@@ -1,0 +1,117 @@
+*{
+	margin:0;
+	padding: 0;
+}
+body{
+	font-size: 13px;
+	font-family: Arial Narrow, sans-serif;
+	background-color: #EBEBEB;
+	color: #747474;
+	font-weight: 100
+}
+/* 引入字体 */
+@font-face {
+  font-family: 'oneDay';
+  src: url('../fonts/Lostbicycles-OneDay.otf')format("opentype"),url('../fonts/Lostbicycles-OneDay.woff'),format('woff'),url('../fonts/Lostbicycles-OneDay.woff2') /* 指定字体文件路径和格式 */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'oneMonth';
+  src: url('../fonts/Lostbicycles-OneMonth.otf')format("opentype"),url('../fonts/Lostbicycles-OneMonth.woff'),format('woff'),url('../fonts/Lostbicycles-OneMonth.woff2') /* 指定字体文件路径和格式 */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'oneWeek';
+  src: url('../fonts/Lostbicycles-OneWeek.otf')format("opentype"),url('../fonts/Lostbicycles-OneWeek.woff'),format('woff'),url('../fonts/Lostbicycles-OneWeek.woff2') /* 指定字体文件路径和格式 */
+  font-weight: normal;
+  font-style: normal;
+}
+/* 引入字体 */
+
+.container{
+	width: 1200px;
+	margin: 20px auto;
+	border-radius: 5px;
+}
+.set{
+	height: 50px;
+	display: flex;
+	align-items: center;
+
+}
+.preview textarea{
+	width: 1000px;
+	height: 300px;
+	margin: 50px 0;
+	font-size: 80px;
+	line-height: 1;
+	letter-spacing: 2px;
+	text-align:center;
+	background-color: #D15043;
+	color: #060606;
+	padding: 100px;
+	font-family: "oneDay";
+	border: 3px solid #747474; 
+	border-radius: 50%;
+}
+.set .item{
+	
+	display: flex;
+	margin: 0 25px;
+	align-items: center;
+}
+.set .item div{
+	width: 150px;
+	margin: 0 10px;
+}
+.set .item span{
+	color: #e38f47;
+}
+.set .item span strong{
+	font-weight: normal;
+}
+.set .item span .fa{
+	color: ##7FFF00;
+}
+.input{
+	height: 50px;
+	border-radius: 100px;
+}
+.input input{
+	display: block;
+	width: 100%;
+    height: 100%;
+    background: transparent;
+    text-indent: 10px;
+    color: #7FFF00;
+}
+select{
+	width: 150px;
+	height: 60px;
+	border-radius: 50px;
+	background-color: transparent;
+	font-family: Arial Narrow, sans-serif;
+	border: 1px solid #747474; /* white BUTTON*/
+	color: #747474;
+ 
+	
+}
+#align .t{
+	margin-left: 20px;
+}
+#align .t.active i{
+	color: #F3F1EF;
+}
+.set .ui-slider .ui-slider-handle{
+	border-radius: 50%;
+	background-color: #EEEC6B;
+	width: 8px;
+	height: 8px;
+}
+.set .ui-slider-horizontal{
+	height: 0.5px;
+	background-color: #FFF;
+
+}
